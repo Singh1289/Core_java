@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="signcss.css">
+     <script type="text/javascript">
+        function validation() {
+            let username = document.getElementById("username").value;
+            
+            let password = document.getElementById("password").value;
+           
+            if (username === "") {
+                alert("Username is mandatory");
+                return false;
+            }
+          
+            if (password.equals("")) {
+                alert("Password is mandatory");
+                return false;
+            }
+            
+        };
+
+    </script>
+    <style type="text/css">
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 380px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2,h4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.input{
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+ <div class="container">
+        <form id="signup-form" action="logServ" onsubmit="validation()" method="post">
+            <h2>Welcome to library</h2>
+            <h4>Login</h4>
+           
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input class="input" type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input class="input" type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="choose">Choose:</label>
+                <input type="radio" id="choose" name="choose" value="staff" required>Staff
+                <input type="radio" id="choose" name="choose" value="student" required>Student
+            </div>
+          
+            <div class="form-group">
+                <button type="submit">login</button>
+                <a href="signup.html">(Student) don't have account..Signup here</a>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>

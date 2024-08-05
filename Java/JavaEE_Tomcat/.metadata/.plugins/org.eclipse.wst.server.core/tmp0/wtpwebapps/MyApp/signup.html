@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="signcss.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="signup-form" action="MyServlet" onsubmit="validation()" method="post">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Gender:</label>
+                <input type="radio" id="gender" name="gender" required>Male
+                <input type="radio" id="gender" name="gender" required>Female
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input type="text" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+                <a href="login.html">Already have account login here</a>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        function validation() {
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let mobile = document.getElementById("mobile").value;
+		
+            if (username === "") {
+                alert("Username is mandatory");
+                return false;
+            }
+            if (email === "") {
+                alert("Email is mandatory");
+                return false;
+            }
+            if (password.equals("")) {
+                alert("Password is mandatory");
+                return false;
+            }
+            if (mobile === "") {
+                alert("mobile is mandatory");
+                return false;
+            }
+            if (mobile.equals("[^0-9]")) {
+                alert("Only numbers are allowed");
+                return false;
+            }
+        };
+
+    </script>
+</body>
+
+</html>

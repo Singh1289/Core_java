@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\Infoway\Java\JavaEE_Tomcat\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3009574643.index
+1924724220.index
+4251400797.index
+1271386478.index
+1386235458.index
+189371408.index
